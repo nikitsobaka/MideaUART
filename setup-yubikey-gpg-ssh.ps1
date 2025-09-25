@@ -79,7 +79,7 @@ Start-Sleep -Seconds 1
 
 # Прописать SSH_AUTH_SOCK (для текущего пользователя, постоянная запись)
 Write-Host "== Установка SSH_AUTH_SOCK для gpg-agent ==" -ForegroundColor Cyan
-$sshSock = "\\.\pipe\gnupg\ssh"
+$sshSock = "C:\Users\$env:USERNAME\AppData\Local\gnupg\S.gpg-agent.ssh"
 & setx SSH_AUTH_SOCK $sshSock | Out-Null
 $env:SSH_AUTH_SOCK = $sshSock
 Write-Host "SSH_AUTH_SOCK = $sshSock" -ForegroundColor DarkGray
