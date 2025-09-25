@@ -9,7 +9,7 @@ namespace dudanov {
 namespace midea {
 namespace ac {
 
-// Air conditioner control command test2 2234222 33
+// Air conditioner control command test2 2234222 3311
 struct Control {
   Optional<float> targetTemp{};
   Optional<Mode> mode{};
